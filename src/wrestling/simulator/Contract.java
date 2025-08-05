@@ -1,22 +1,23 @@
 package wrestling.simulator;
 
-
-
 import java.io.Serializable;
 
-class Contract implements Serializable {
+public class Contract implements Serializable {
+    private static final long serialVersionUID = 1L;
+    
     private Promotion promotion;
-    private int payPerShow;
-    private int durationWeeks;
-    
-    public Contract(Promotion promotion, int payPerShow, int durationWeeks) {
+    private int monthlyPay;
+    private int durationMonths;
+
+    public Contract(Promotion promotion, int monthlyPay, int durationMonths) {
         this.promotion = promotion;
-        this.payPerShow = payPerShow;
-        this.durationWeeks = durationWeeks;
+        this.monthlyPay = monthlyPay;
+        this.durationMonths = durationMonths;
     }
-    
+
     // Getters
     public Promotion getPromotion() { return promotion; }
-    public int getPayPerShow() { return payPerShow; }
-    public int getDurationWeeks() { return durationWeeks; }
+    public int getMonthlyPay() { return monthlyPay; }
+    public int getDurationMonths() { return durationMonths; }
 }
+
