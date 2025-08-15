@@ -104,5 +104,7 @@ public class Main {
         else if (event.contains("poisoning")) player.setHealth(player.getHealth() - 15);
         else player.setPopularity(player.getPopularity() + 10);
     }
+    
+   
+    
 }
-
