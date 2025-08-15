@@ -43,5 +43,18 @@ public class Wrestler {
 		// TODO Auto-generated method stub
 		
 	}
+	private Contract contract;
+
+	public void signContract(Contract newContract) {
+	    this.contract = newContract;
+	}
+
+	public void processContractPayment() {
+	    if (contract != null && !contract.isExpired()) {
+	        contract.processPayment(this);
+	    }
+	}
+	
+	
 
 }
